@@ -14,7 +14,14 @@ The full description of the dataset and the methodology can be found in our pre-
 Please cite our work, when using the dataset:
 
 ```bibtex
-@misc{netmob23, title={The NetMob23 dataset: A high-resolution multi-region service-level mobile data traffic cartography}, author={Martínez-Durive, Orlando E and Mishra, Sachit and Ziemlicki, Cezary and Rubrichi, Stefania and Smoreda, Zbigniew and Fiore, Marco}, year={2023}, eprint={2305.06933}, archivePrefix={arXiv}, primaryClass={cs.NI} }
+@misc{netmob23, 
+  title={The NetMob23 dataset: A high-resolution multi-region service-level mobile data traffic cartography}, 
+  author={Martínez-Durive, Orlando E and Mishra, Sachit and Ziemlicki, Cezary and Rubrichi, Stefania and Smoreda, Zbigniew and Fiore, Marco}, 
+  year={2023}, 
+  eprint={2305.06933}, 
+  archivePrefix={arXiv}, 
+  primaryClass={cs.NI} 
+}
 ```
 
 ## Data access
@@ -58,10 +65,10 @@ $row\_index = floor(\frac{tile\_id}{cols}) $
 
 $col\_index = tile\_id \mod cols$
 
-The matrix dimension (rows, cols) are given in the `cities_dims` dictionary.
+The matrix dimension (rows, cols) are given in the `city_dims` dictionary.
 
 ```python
-cities_dims = {
+city_dims = {
     "Bordeaux": (334, 342), 
     "Clermont-Ferrand": (208, 268),
     "Dijon": (195, 234),
