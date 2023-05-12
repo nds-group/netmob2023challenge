@@ -3,14 +3,12 @@
 # Netmob 2023 Data Challenge
 
 
-This repository contains information and code snippets on how to manipulate the data from the **Netmob 2023 Data Challenge**.
+<!-- This repository contains information and code snippets on how to manipulate the data from the **Netmob 2023 Data Challenge**. -->
 
-
-## Report
+The full description of the dataset and the methodology can be found in our pre-print available here: [The NetMob23 Dataset: A High-resolution Multi-region Service-level Mobile Data Traffic Cartography](https://arxiv.org/abs/2305.06933).
 
 <img src="images/paper_front.png" width="50%" height="100%"/> 
 
-The full description of the dataset and the methodology can be found in our pre-print available here: [The NetMob23 Dataset: A High-resolution Multi-region Service-level Mobile Data Traffic Cartography](https://arxiv.org/abs/2305.06933).
 
 
 Please cite our work, when using the dataset:
@@ -95,7 +93,7 @@ The notebook [Regions.ipynb](Regions.ipynb) contains code snippet how to load th
 
 ### Traffic dataset
 
-The traffic dataset is composed of **209440** txt files.
+The traffic dataset is composed of **209440** plain text files.
 Each one for each combination of city, service, day and direction of the traffic. 
 A given file, contains the traffic record for all the tiles of the city every 15 minutes.
 
