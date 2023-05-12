@@ -99,7 +99,7 @@ A given file, contains the traffic record for all the tiles of the city every 15
 
 <img src="images/traffic_records.png" width="80%" height="100%"/> 
 
-The notebook [Traffic_map.ipynb](Traffic_map.ipynb) contains code snippet on how to load the traffic records from the txt files and plot traffic maps.
+The notebook [Traffic.ipynb](Traffic.ipynb) contains code snippet on how to load the traffic records from the txt files and plot traffic maps.
 
 <img src="images/city_traffic_maps.png" width="80%" height="100%"/> 
 
