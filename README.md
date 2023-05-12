@@ -60,7 +60,7 @@ $col\_index = tile\_id \mod cols$
 
 The matrix dimension (rows, cols) are given in the `cities_dims` dictionary.
 
-```json
+```python
 cities_dims = {
     "Bordeaux": (334, 342), 
     "Clermont-Ferrand": (208, 268),
