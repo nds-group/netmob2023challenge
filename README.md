@@ -40,16 +40,16 @@ The spatial dataset is composed of 20 France cities. Each one is represented by 
 The tile (feature) is represented by a polygon using [WGS84](https://en.wikipedia.org/wiki/World_Geodetic_System). 
 
 ```json
-{'type': 'Feature',
- 'geometry': {'type': 'Polygon',
-  'coordinates': [[
+{"type": "Feature",
+ "geometry": {"type": "Polygon",
+  "coordinates": [[
     [4.7662070878542515, 45.55631465259445],
     [4.766246657177647, 45.55721386239888],
     [4.767526651889026, 45.5571860567685],
     [4.767487061740877, 45.55628684742171],
     [4.7662070878542515, 45.55631465259445]
     ]]},
- 'properties': {'tile_id': 66}}
+ "properties": {"tile_id": 66}}
  ```
 
 The `tile_id` allows to represent the spatial information in a matrix form; where each tile is represented by a matrix element. 
@@ -62,28 +62,28 @@ The matrix dimension (rows, cols) are given in the `cities_dims` dictionary.
 
 ```json
 cities_dims = {
-    'Bordeaux': (334, 342), 
-    'Clermont-Ferrand': (208, 268),
-    'Dijon': (195, 234),
-    'France': (9742, 9588),
-    'Grenoble': (409, 251),
-    'Lille': (330, 342),
-    'Lyon': (426, 287),
-    'Mans': (228, 246),
-    'Marseille': (211, 210),
-    'Metz': (226, 269),
-    'Montpellier': (334, 327),
-    'Nancy': (151, 165),
-    'Nantes': (277, 425),
-    'Nice': (150, 214),
-    'Orleans': (282, 256),
-    'Paris': (409, 346),
-    'Rennes': (423, 370),
-    'Rouen': (327, 373),
-    'Saint-Etienne': (305, 501),
-    'Strasbourg': (296, 258),
-    'Toulouse': (280, 347),
-    'Tours': (251, 270)
+    "Bordeaux": (334, 342), 
+    "Clermont-Ferrand": (208, 268),
+    "Dijon": (195, 234),
+    "France": (9742, 9588),
+    "Grenoble": (409, 251),
+    "Lille": (330, 342),
+    "Lyon": (426, 287),
+    "Mans": (228, 246),
+    "Marseille": (211, 210),
+    "Metz": (226, 269),
+    "Montpellier": (334, 327),
+    "Nancy": (151, 165),
+    "Nantes": (277, 425),
+    "Nice": (150, 214),
+    "Orleans": (282, 256),
+    "Paris": (409, 346),
+    "Rennes": (423, 370),
+    "Rouen": (327, 373),
+    "Saint-Etienne": (305, 501),
+    "Strasbourg": (296, 258),
+    "Toulouse": (280, 347),
+    "Tours": (251, 270)
     }
 ```
 
