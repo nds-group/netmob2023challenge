@@ -3,7 +3,7 @@
 # Netmob 2023 Data Challenge
 
 <a href="https://api.mapbox.com/styles/v1/14ndy15/clhrwb13x021g01pggpis9c01.html?title=view&access_token=pk.eyJ1IjoiMTRuZHkxNSIsImEiOiJjbGhydmN6MzAwMTNoM2RvMXdueDlsNDB6In0.weceUml_7pXytBkhTclQCQ&zoomwheel=true&fresh=true#6.81/48.178/2.199/29.9/56" target="_blank">
-  <img src="images/YouTube_3D_map.png" width="50%" height="100%"/> 
+  <img src="images/YouTube_3D_map.png" width="100%" height="100%"/> 
 </a>
 
 
