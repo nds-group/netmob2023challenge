@@ -46,10 +46,10 @@ Please cite our work, when using the dataset:
 
 ### Spatial dataset
 
-<img src="images/cities_density.png" width="60%" height="100%"/> 
-
 The spatial dataset is composed of 20 France cities. Each one is represented by a geojson file, that contains the grid of the city composed of 100 x 100 m<sup>2</sup> tiles. 
 The tile (feature) is represented by a polygon using [WGS84](https://en.wikipedia.org/wiki/World_Geodetic_System). 
+
+<img src="images/cities_density.png" width="60%" height="100%"/> 
 
 ```json
 {"type": "Feature",
@@ -66,9 +66,9 @@ The tile (feature) is represented by a polygon using [WGS84](https://en.wikipedi
 
 By using the `tile_id` we can also represent the spatial information in a matrix form; where each tile represented a matrix cell. 
 
-$row\_index = floor(\frac{tile\_id}{cols}) $
+$row_{index} = floor(\frac{tile_{id}}{cols}) $
 
-$col\_index = tile\_id \mod cols$
+$col_{index} = tile_{id} \mod cols$
 
 The matrix dimension (rows, cols) are given in the `cities_dims` dictionary.
 
