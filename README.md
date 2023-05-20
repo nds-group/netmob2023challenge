@@ -9,13 +9,27 @@
 
 <a href="https://api.mapbox.com/styles/v1/14ndy15/clhrwb13x021g01pggpis9c01.html?title=view&access_token=pk.eyJ1IjoiMTRuZHkxNSIsImEiOiJjbGhydmN6MzAwMTNoM2RvMXdueDlsNDB6In0.weceUml_7pXytBkhTclQCQ&zoomwheel=true&fresh=true#6.81/48.178/2.199/29.9/56" target="_blank">Youtube 3D traffic map</a> in 20 France cities. The map is interactive, you can zoom in/out and rotate the map.
 
+## Data access
+
+The access to the data is **restricted to the participants** of the [Netmob 2023 Data Challenge](http://netmob2023challenge.networks.imdea.org/) and to the [terms and conditions](https://netmob2023challenge.networks.imdea.org/terms-and-conditions/).
+
+
+The NetMob 2023 Data Challenge is a unique opportunity to access data that is typically **very difficult to come by**, and employ it to generate new knowledge, support innovation, prove theories at scale, or validate solutions in real-world settings. Prospective participants shall apply to the challenge by registering at https://netmob2023challenge.networks.imdea.org/. Complete instructions are provided at the same webpage.
+
 ## Data description
+
+The dataset is composed by:
+* 20 urban areas in France (Paris, Lyon, Marseille, Toulouse, Nice, etc.)
+* 68 mobile services (including YouTube, Netflix, Facebook, Instagram, Gmail, etc.)
+* 77 days continuous days
+* 100 x 100 m2 spatial resolution
+* 15 minute temporal resolution
+* 400+ billion data points
+* 2.3+ TB of data
 
 The full description of the dataset and the methodology can be found in our pre-print available here: [The NetMob23 Dataset: A High-resolution Multi-region Service-level Mobile Data Traffic Cartography](https://arxiv.org/abs/2305.06933).
 
 <img src="images/paper_front.png" width="50%" height="100%"/> 
-
-
 
 Please cite our work, when using the dataset:
 
@@ -30,26 +44,11 @@ Please cite our work, when using the dataset:
 }
 ```
 
-## Data access
-
-The dataset is composed by:
-* 20 urban areas in France
-* 68 mobile services (including YouTube, Netflix, Facebook, Instagram, Gmail, etc.)
-* 77 days continuous days
-* 100 x 100 m2 spatial resolution
-* 15 minute temporal resolution
-* 400+ billion data points
-* 2.3+ TB of data
-
-The access to the full data is **restricted to the participants** of the [Netmob 2023 Data Challenge](http://netmob2023challenge.networks.imdea.org/) and to the [terms and conditions](https://netmob2023challenge.networks.imdea.org/terms-and-conditions/).
-
-
-
 ### Spatial dataset
 
 <img src="images/cities_density.png" width="60%" height="100%"/> 
 
-The spatial dataset is composed of 20 France cities. Each one is represented by a geojson file, that contains the grid of the city composed of 100 x 100 m<sup>2</sup> tile. 
+The spatial dataset is composed of 20 France cities. Each one is represented by a geojson file, that contains the grid of the city composed of 100 x 100 m<sup>2</sup> tiles. 
 The tile (feature) is represented by a polygon using [WGS84](https://en.wikipedia.org/wiki/World_Geodetic_System). 
 
 ```json
@@ -65,16 +64,16 @@ The tile (feature) is represented by a polygon using [WGS84](https://en.wikipedi
  "properties": {"tile_id": 66}}
  ```
 
-The `tile_id` allows to represent the spatial information in a matrix form; where each tile is represented by a matrix element. 
+By using the `tile_id` we can also represent the spatial information in a matrix form; where each tile represented a matrix cell. 
 
 $row\_index = floor(\frac{tile\_id}{cols}) $
 
 $col\_index = tile\_id \mod cols$
 
-The matrix dimension (rows, cols) are given in the `city_dims` dictionary.
+The matrix dimension (rows, cols) are given in the `cities_dims` dictionary.
 
 ```python
-city_dims = {
+cities_dims = {
     "Bordeaux": (334, 342), 
     "Clermont-Ferrand": (208, 268),
     "Dijon": (195, 234),
@@ -98,7 +97,7 @@ city_dims = {
     }
 ```
 
-The notebook [Regions.ipynb](Regions.ipynb) contains code snippet how to load the the geojson files and plot the regions. For a simple visualization, you can use the [geojson.io](https://geojson.io/) website.
+The notebook [Regions.ipynb](Regions.ipynb) contains code snippets of how to load the geojson files and plot the regions. For a simple visualization, you can just load the geojson file in the [geojson.io](https://geojson.io/) website.
 
 <!-- <img src="images/tile.png" width="45%" height="100%"/>  -->
 
@@ -110,11 +109,13 @@ A given file, contains the traffic record for all the tiles of the city every 15
 
 <img src="images/traffic_records.png" width="80%" height="100%"/> 
 
+Due to daylight saving time in France on **March 31, 2019**, the traffic records for that day have **92-time columns** instead of 96.
+These missing timestamps are between 02:00 and 03:00 French local time. Therefore, the first 8-time columns cover the period from 00:00 to 01:45, and the 9-time column corresponds to 03:00.
+
 The notebook [Traffic.ipynb](Traffic.ipynb) contains code snippet on how to load the traffic records from the txt files and plot traffic maps.
 
 <img src="images/city_traffic_maps.png" width="80%" height="100%"/> 
 
-Also, how is possible to aggregate the traffic records to obtain traffic time series.
+Also, how is possible to aggregate the traffic records over space to obtain traffic time series.
 
-<img src="images/city_time_series.png" width="80%" height="100%"/> 
-
+<img src="images/city_time_series.png" width="80%" height="100%"/>
