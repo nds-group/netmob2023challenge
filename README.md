@@ -50,8 +50,8 @@ The spatial dataset is composed of 20 France cities.
 However, the formal definition in most of the cases is [Metropole](https://en.wikipedia.org/wiki/M%C3%A9tropole), an administrative entity in France, in which several communes cooperate, and which has the right to levy local tax, an établissement public de coopération intercommunale à fiscalité propre.
 
 The list of communnes that compose these cities are given in the [`cities_communes_code.json`](data/cities_communes_code.json) file, while the list of IRIS (smaller administrative units) are given in the [`cities_iris_code.json`](data/cities_iris_code.json) file.
-
 GeoJson files for cities, using communes are in the [`cities_communes`](data/cities_communes) folder, while the ones using IRIS are in the [`cities_iris`](data/cities_iris) folder.
+
 
 Each one is represented by a geojson file, that contains the grid of the city composed of 100 x 100 m<sup>2</sup> tiles. 
 The tile (feature) is represented by a polygon using [WGS84](https://en.wikipedia.org/wiki/World_Geodetic_System). 
